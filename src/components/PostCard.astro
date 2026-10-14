@@ -1,0 +1,8 @@
+---
+const { title, description, url } = Astro.props
+---
+
+<a class="block p-4 bg-white rounded-md card-hover" href={Astro.props.href || '#'}>
+  <h3 class="text-lg font-medium text-primary">{title}</h3>
+  <p class="text-sm text-muted mt-2">{description}</p>
+</a>

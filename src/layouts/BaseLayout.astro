@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.astro'
+import { Astro } from 'astro'
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="个人博客 — 端庄大气、响应式、流畅动画" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{Astro.props.title || '个人博客'}</title>
+    <link rel="stylesheet" href="/src/styles/global.css">
+  </head>
+  <body class="font-sans text-gray-800">
+    <Header />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <footer class="border-t mt-12 py-8 text-center text-sm text-muted">
+      © {new Date().getFullYear()} 个人博客 —— 构建于 Astro & Tailwind
+    </footer>
+  </body>
+</html>

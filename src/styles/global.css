@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #f8fafc;
+  --muted: #475569;
+}
+
+body{
+  background: var(--bg);
+}
+
+/* small utility for smooth card hover */
+.card-hover{ transition: transform .28s cubic-bezier(.22,.9,.35,1), box-shadow .28s; }
+.card-hover:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.08); }
