@@ -1,23 +1,26 @@
 # 个人博客
 
-这是一个基于 Astro + Tailwind 的个人博客示例，风格：端庄大气、响应式、流畅动画。
+这是一个基于 Astro + Tailwind 的现代个人博客示例项目，风格偏端庄、简洁与现代感。
 
-本仓库包含：
+## 开发
 
-- Astro 项目骨架
-- Tailwind CSS 配置
-- 两篇示例中文文章（位于 src/pages/posts）
-- GitHub Actions 工作流：自动构建并部署到 gh-pages 分支用于 GitHub Pages
+```bash
+npm install
+npm run dev
+```
 
-快速开始：
+## 构建
 
-1. 克隆仓库
-   git clone https://github.com/3185263343/personal-blog.git
-2. 安装依赖
-   npm install
-3. 本地开发
-   npm run dev
-4. 构建
-   npm run build
+```bash
+npm run build
+```
 
-部署：Push 到 main 分支会触发 GitHub Actions 自动构建并部署到 gh-pages（用于 GitHub Pages）。
+## 部署
+
+Push 到 `main` 分支后，GitHub Actions 会自动构建并部署到 `gh-pages` 分支，随后通过 GitHub Pages 访问。
+
+## 说明
+
+- 首页：`src/pages/index.md`
+- 文章列表：`src/pages/posts/index.astro`
+- 文章页：`src/pages/posts/post-1.astro`、`src/pages/posts/post-2.astro`

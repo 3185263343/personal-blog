@@ -1,6 +1,10 @@
 ---
-import Header from '../components/Header.astro'
-import { Astro } from 'astro'
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title || '个人博客';
+const description = frontmatter?.description || '端庄大气的个人博客';
 ---
 
 <!doctype html>
@@ -8,18 +12,21 @@ import { Astro } from 'astro'
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="个人博客 — 端庄大气、响应式、流畅动画" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.svg" />
-    <title>{Astro.props.title || '个人博客'}</title>
-    <link rel="stylesheet" href="/src/styles/global.css">
+    <title>{title}</title>
   </head>
-  <body class="font-sans text-gray-800">
+  <body>
     <Header />
-    <main class="min-h-screen">
+    <main class="min-h-screen pb-16">
       <slot />
     </main>
-    <footer class="border-t mt-12 py-8 text-center text-sm text-muted">
-      © {new Date().getFullYear()} 个人博客 —— 构建于 Astro & Tailwind
+    <footer class="border-t border-slate-200/80 bg-white/80 backdrop-blur-sm">
+      <div class="content-shell flex flex-col md:flex-row items-center justify-between py-8 text-sm text-slate-600">
+        <span>© {new Date().getFullYear()} 个人博客</span>
+        <span>端庄 · 大气 · 现代</span>
+      </div>
     </footer>
   </body>
 </html>

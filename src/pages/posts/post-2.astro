@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../src/layouts/BaseLayout.astro';
+const title = '现代动效';
+const description = '微妙的动画可以强化页面质感，却不打扰内容阅读。';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="content-shell py-16 md:py-20">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Motion</p>
+      <h1 class="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">现代动效</h1>
+      <p class="mt-4 text-base text-slate-500">2026-10-13</p>
+
+      <div class="article-body mt-10 rounded-[2rem] border border-slate-200 bg-white p-6 md:p-10 shadow-sm">
+        <p>当下的网页体验越来越重视“感受上的稳”，而不是“视觉上的轰鸣”。恰到好处的动效能够提升浏览舒适度，让页面更有层次感。</p>
+
+        <h2>动效原则</h2>
+        <p>优先选择短距离、低幅度和高可读性的效果：卡片悬浮、内容淡入、点击反馈和滑动过渡都适合。</p>
+
+        <ul>
+          <li>避免大范围一口气变换页面</li>
+          <li>让动画持续较短，通常 200~400ms 更稳妥</li>
+          <li>保证内容仍然易于扫描和阅读</li>
+        </ul>
+
+        <h2>合理的“轻度质感”</h2>
+        <p>相较于夸张的彩色动画，低饱和度且缓和的动态反馈更能保持页面的成熟氛围。真正好的体验来自“无感”——用户几乎不需要意识到动画的存在，却会感觉页面更顺。</p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

@@ -2,15 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   --bg: #f8fafc;
+  --panel: #ffffff;
   --muted: #475569;
+  --ink: #0f172a;
+  --line: rgba(15, 23, 42, 0.09);
+  --shadow: rgba(15, 23, 42, 0.08);
 }
 
-body{
-  background: var(--bg);
+html {
+  scroll-behavior: smooth;
 }
 
-/* small utility for smooth card hover */
-.card-hover{ transition: transform .28s cubic-bezier(.22,.9,.35,1), box-shadow .28s; }
-.card-hover:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.08); }
+body {
+  background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+  color: var(--ink);
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.content-shell {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.card-hover {
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.article-body p,
+.article-body li,
+.article-body blockquote {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-body blockquote {
+  border-left: 3px solid rgba(15, 23, 42, 0.18);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../src/layouts/BaseLayout.astro';
+const title = '端庄的设计';
+const description = '如何在简洁的排版中维持强烈的专业感与温度。';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="content-shell py-16 md:py-20">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Design</p>
+      <h1 class="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">端庄的设计</h1>
+      <p class="mt-4 text-base text-slate-500">2026-10-14</p>
+
+      <div class="article-body mt-10 rounded-[2rem] border border-slate-200 bg-white p-6 md:p-10 shadow-sm">
+        <p>本文展示如何在网站中保持一种克制但不乏厚度的视觉语言：足够清晰、足够稳定、并在细节处留出呼吸空间。</p>
+
+        <h2>建立主视觉逻辑</h2>
+        <p>在个人博客中，最重要的并不是炫目，而是让阅读过程流畅且沉浸。我们可以用稳重的字体、高对比的标题和充足的留白来构建整体节奏。</p>
+
+        <ul>
+          <li>颜色以深灰、白色和柔和灰为主</li>
+          <li>排版强调标题和段落之间的呼吸</li>
+          <li>交互细节采用轻微悬浮和淡入动效</li>
+        </ul>
+
+        <blockquote>“好的设计不是让眼睛忙碌，而是让思想更容易前进。”</blockquote>
+
+        <h2>让内容先于效果</h2>
+        <p>视觉设计最终要服务于信息的传达。一个个人博客的最重要任务是帮助内容被轻松发现、被舒适地阅读，然后被记住。</p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
